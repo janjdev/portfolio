@@ -1,0 +1,15 @@
+<!-- ✅ SVG for Navigation -->
+<svg width="1440" height="80" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="80" fill="#F5F5F5"/>
+  <!-- Logo -->
+  <text x="40" y="50" font-family="Space Grotesk" font-size="24" fill="#111111">JJ</text>
+  <!-- Navigation Links -->
+  <text x="1100" y="50" font-family="Inter" font-size="18" fill="#111111">Projects</text>
+  <text x="1200" y="50" font-family="Inter" font-size="18" fill="#111111">Resume</text>
+  <text x="1300" y="50" font-family="Inter" font-size="18" fill="#111111">Contact</text>
+  <!-- Dark Mode Toggle Switch -->
+  <!-- Toggle Track -->
+  <rect x="1370" y="30" rx="12" ry="12" width="40" height="20" fill="#CCCCCC" />
+  <!-- Toggle Knob -->
+  <circle cx="1380" cy="40" r="10" fill="#FFFFFF" stroke="#111111" stroke-width="2" />
+</svg>
