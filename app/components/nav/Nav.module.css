@@ -1,0 +1,42 @@
+.item-hover:hover{
+  color: var(--primary-text);
+}
+
+.item-hover:hover span,
+.item-hover:active span,
+.item-hover.active {
+  color: var(--accent);
+}
+
+.item-hover:hover .dot,
+.item-hover:active .dot,
+.item-hover.active .dot {
+  background-color: var(--accent);
+}
+
+.item-active div{
+color: var(--primary-text);
+}
+
+.item-active span {
+  color: var(--accent);
+}
+
+.item-active .dot {
+  background-color: var(--accent);
+}
+
+.navLink {
+  font-family: var(--font-geist-sans);
+  font-size: .85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.4);
+  transition: color 200ms ease;
+}
+
+
+
+
+

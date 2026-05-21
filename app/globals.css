@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary-text: #000000;
+  --muted-text: #6B7280;
+  --accent: #F91262;
+  --extra-bold: 800;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary-text: var(--primary-text);
+  --color-muted-text: var(--muted-text);
+  --color-accent: var(--accent);
+  --font-geist-sans: var(--font-geist-sans);
+  --font-extra-bold: var(--extra-bold);
+  --font-bold: var(--font-bold);
+  --align-baseline: var(--align-baseline);
+  --font-sans: var(--font-manrope);
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.--accent {
+  background-color: var(--accent);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.--extra-bold {
+  font-weight: 800;
+}
+
+
+.text-\[42px\]{
+  font-size: 42px;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+.font-black {
+  font-weight: 900;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+.text-1em {
+  font-size: 1em;
+}
+.text-21xl {
+  font-size: 21rem;
+}
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+
