@@ -125,8 +125,8 @@ const navLinks = navItems.map(item => ({
               );
             })}
           </ul>
-          <div className="text-xs text-black/40 mt-20">
-            <div className="socials  flex flex-row gap-6 ">
+          <div className="text-xs text-black/40 mt-10 ">
+            <div className="socials  flex flex-row gap-6 justify-center">
               <div className="text-black/50 hover:text-[#FF2D75] transition-colors duration-200">
                 <a href="https://github.com/janjdev" target="_blank" rel="noopener noreferrer">
                   <GitHubIcon alt="GitHub" className="inline w-10 h-10 mr-1 hover:fill-[#FF2D75] transition-colors duration-200" width={16} height={16} />
@@ -139,8 +139,14 @@ const navLinks = navItems.map(item => ({
               </div>
             </div>
           </div>
-          <div className="flex-1"> 
-            <span className={styles.dot} />
+          <div className={`flex justify-center items-baseline mt-10 ${styles.connect}`}> 
+            <span className={`mr-3 ${styles.dot}`} />
+            <div> 
+              <span className={`${styles.connectLabel} flex`}>Let&apos;s Connect</span>
+              <Link href="mailto:hello@janj.dev" className={`text-black/80 hover:text-[#FF2D75] tracking-[-0.01em] transition-colors duration-200 ${styles.connectEmail}`}>
+              hello@janj.dev
+              </Link>
+            </div>
           </div>
         </div>
       </nav>

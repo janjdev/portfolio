@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { Manrope } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,6 +16,11 @@ const manrope = Manrope(
     weight: ['400', '500', '600', '700', '800']
   });
 
+  const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -23,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${GeistSans.variable} ${manrope.variable} h-full antialiased`}
+      className={`${GeistSans.variable} ${manrope.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
