@@ -3,6 +3,8 @@ import { GeistSans } from "geist/font/sans";
 import { Manrope } from 'next/font/google';
 import { Inter } from 'next/font/google';
 import "./globals.css";
+import Sidebar from "./components/sidebar/Sidebar";
+import MobileNav from "./components/nav/MobileNav";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,7 +33,11 @@ export default function RootLayout({
       lang="en"
       className={`${GeistSans.variable} ${manrope.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <MobileNav />
+        <Sidebar />
+        {children}
+      </body>
     </html>
   );
 }

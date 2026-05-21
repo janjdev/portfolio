@@ -90,17 +90,17 @@ const navLinks = navItems.map(item => ({
         >
           <div className="relative w-6 h-6 flex items-center justify-center">
             <span
-              className={`absolute left-1/2 h-1 w-6 -translate-x-1/2 rounded-full bg-black transition-all duration-300 origin-center ${
+              className={`absolute left-1/2 h-0.5 w-7 -translate-x-1/2 rounded-full bg-black transition-all duration-300 origin-center ${
                 isOpen ? 'top-1/2 rotate-45 -translate-y-1/2' : 'top-[4px]'
               }`}
             />
             <span
-              className={`absolute left-1/2 h-1 w-6 -translate-x-1/2 rounded-full bg-black transition-all duration-300 origin-center ${
+              className={`absolute left-1/2 h-0.5 w-7 -translate-x-1/2 rounded-full bg-black transition-all duration-300 origin-center ${
                 isOpen ? 'top-1/2 opacity-0 -translate-y-1/2' : 'top-1/2 opacity-100 -translate-y-1/2'
               }`}
             />
             <span
-              className={`absolute left-1/2 h-1 w-6 -translate-x-1/2 rounded-full bg-black transition-all duration-300 origin-center ${
+              className={`absolute left-1/2 h-0.5 w-7 -translate-x-1/2 rounded-full bg-black transition-all duration-300 origin-center ${
                 isOpen ? 'top-1/2 -rotate-45 -translate-y-1/2' : 'bottom-[4px]'
               }`}
             />
