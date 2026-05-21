@@ -1,4 +1,6 @@
 .mobileHeader {
+	position: relative;
+	z-index: 60;
 	align-items: center;
 	justify-content: space-between;
 	padding: 1rem;
@@ -6,10 +8,10 @@
 
 .mobilePanel {
 	position: fixed;
-	top: 0;
+	top: 4.75rem;
 	right: 0;
 	left: 0;
-	height: 100vh;
+	height: calc(100vh - 4.75rem);
 	width: 100vw;
 	background: var(--background);
 	z-index: 50;
@@ -17,20 +19,14 @@
 	transition: transform 300ms ease;
 	display: flex;
 	flex-direction: column;
-	padding: 2.5rem 1.5rem;
-	box-shadow: -10px 0 30px rgba(0,0,0,0.08);
+	padding: 2rem 1.5rem 2.5rem;
+	box-shadow: none;
   overflow: scroll;
 	/* full-width panel — no left border */
 }
 
 .mobilePanel.open {
 	transform: translateX(0);
-}
-
-.panelClose {
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
 }
 
 .navList {
@@ -79,9 +75,13 @@
 .navItemActive .dot,
 .navItemActive .navIndex,
 .navItemActive .navLabel {
-	color: var(--primary-text);
+    color: var(--accent);
 }
 
 .navItemActive .dot {
 	background-color: var(--accent);
+}
+
+.navItemActive {
+	border-bottom-color: var(--accent);
 }

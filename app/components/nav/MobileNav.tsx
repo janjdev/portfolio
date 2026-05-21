@@ -75,46 +75,39 @@ const navLinks = navItems.map(item => ({
   }, [isOpen]);
 
   return (
-    <header className={`${styles['mobileHeader']} flex md:hidden items-center justify-between p-4 border-b border-black/10`}>
+    <header className={`${styles['mobileHeader']} flex md:hidden items-center justify-between p-4`}>
       <div className="flex items-baseline gap-1 w-full">
         <span className="text-4xl font-black leading-none tracking-tight">JJ</span>
         <span className="w-1.5 h-1.5 rounded-full --accent" />
       </div>
-      {/* Hamburger Button */}
+      {/* Toggle Button */}
         <button
           ref={toggleButtonRef}
           onClick={toggleMenu}
           className="p-2 focus:outline-none"
-          aria-label="Toggle menu"
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isOpen}
         >
-          <div className="w-6 h-6 flex flex-col justify-center items-center">
+          <div className="relative w-6 h-6 flex items-center justify-center">
             <span
-              className={`h-0.5 w-6 bg-black transition-all duration-300 ${
-                isOpen ? 'rotate-45' : '-translate-y-2'
+              className={`absolute left-1/2 h-1 w-6 -translate-x-1/2 rounded-full bg-black transition-all duration-300 origin-center ${
+                isOpen ? 'top-1/2 rotate-45 -translate-y-1/2' : 'top-[4px]'
               }`}
             />
             <span
-              className={`h-0.5 w-6 bg-black transition-all duration-300 ${
-                isOpen ? '-rotate-45' : 'translate-y-2'
+              className={`absolute left-1/2 h-1 w-6 -translate-x-1/2 rounded-full bg-black transition-all duration-300 origin-center ${
+                isOpen ? 'top-1/2 opacity-0 -translate-y-1/2' : 'top-1/2 opacity-100 -translate-y-1/2'
+              }`}
+            />
+            <span
+              className={`absolute left-1/2 h-1 w-6 -translate-x-1/2 rounded-full bg-black transition-all duration-300 origin-center ${
+                isOpen ? 'top-1/2 -rotate-45 -translate-y-1/2' : 'bottom-[4px]'
               }`}
             />
           </div>
         </button>
       <nav className="md:hidden">
         <div ref={panelRef} className={`${styles.mobilePanel} ${isOpen ? styles.open : ''} h-screen flex-col justify-between`} aria-hidden={!isOpen}>
-          <button
-            ref={closeButtonRef}
-            onClick={toggleMenu}
-            className={`${styles.panelClose} p-2 focus:outline-none`}
-            aria-label="Close menu"
-          >
-            <div className="w-6 h-6 flex flex-col justify-center items-center">
-              <span className="h-0.5 w-6 bg-black rotate-45" />
-              <span className="h-0.5 w-6 bg-black -rotate-45" />
-            </div>
-          </button>
-
           <ul className={styles.navList}>
             {navLinks.map((link, idx) => {
               const index = String(idx + 1).padStart(2, '0');
