@@ -1,36 +1,144 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JANJ.DEV
 
-## Getting Started
+Personal portfolio and engineering site for January Johnson.
 
-First, run the development server:
+A typography-driven, editorial-style developer portfolio focused on modern frontend engineering, thoughtful UX, and intentional design systems.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project is a personal portfolio site designed and developed using modern frontend technologies and AI-assisted development workflows.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The site emphasizes:
+- intentional typography
+- minimalist interaction patterns
+- scalable component architecture
+- thoughtful UX implementation
+- modern responsive design
 
-## Learn More
+The portfolio is a fully custom application with a strong focus on clarity, usability, and visual hierarchy.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Design Philosophy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The visual direction of this project draws heavily from modern editorial and product-focused web design.
 
-## Deploy on Vercel
+Core principles include:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- strong visual hierarchy
+- whitespace as structure
+- restrained interaction design
+- typography-first layouts
+- minimalist color usage
+- intentional motion and transitions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The goal is to create an experience that feels engineered, clean, and visually intentional.
+
+---
+
+## Features
+
+### Current Features
+
+- Desktop sidebar navigation
+- Fullscreen mobile overlay navigation
+- Route-aware active navigation states
+- Custom SVG icon system
+- Editorial-style typography system
+- Component-scoped styling architecture
+- SVG hover and interaction states
+
+### Planned Features
+
+- Animated rotating hero text
+- Case study project pages
+- Scroll-based transitions
+- Interactive SVG logo system
+- Motion system refinements
+
+---
+
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Next.js 16 | React framework |
+| React | Component architecture |
+| TypeScript | Type safety |
+| Tailwind CSS | Utility-first styling |
+| CSS Modules | Scoped component styles |
+| SVGR | SVG component integration |
+| Vercel | Deployment platform |
+
+---
+
+## AI-Assisted Development
+
+This project is being developed using modern AI-assisted engineering workflows.
+
+AI tooling has been used for:
+- frontend architecture iteration
+- component scaffolding
+- SVG workflow guidance
+- Tailwind and Next.js implementation support
+- design system refinement
+- UI/UX iteration
+
+Primary tooling used during development includes:
+- GitHub Copilot - Claude Opus 4.7
+
+
+AI is being used as a collaborative engineering tool, while architectural decisions, implementation direction, and final integration remain developer-driven.
+
+---
+
+## Architecture Decisions
+
+### Hybrid Styling Strategy
+
+This project uses a hybrid approach combining:
+- Tailwind utility classes
+- CSS Modules
+- reusable component abstractions
+
+This allows:
+- rapid iteration
+- reusable design primitives
+- cleaner component readability
+- controlled styling complexity
+
+---
+
+### SVG-Driven UI
+
+Rather than relying heavily on icon libraries, the project uses SVG-based assets and componentized vector workflows for:
+- scalable rendering
+- precise interaction control
+- hover/fill animations
+- visual consistency
+
+---
+
+
+
+## Project Status
+
+Currently in active development.
+
+Primary focus areas:
+- case study content
+- motion and interaction systems
+- portfolio storytelling
+
+---
+
+## Author
+
+January Johnson
+
+Software Engineer  
+Full Stack Developer  
+UX-Conscious Engineer  
+Systems Thinker
