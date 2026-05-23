@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import "./globals.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import MobileNav from "./components/nav/MobileNav";
+import Footer from "./components/footer/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,12 +32,40 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${GeistSans.variable} ${manrope.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                try {
+                  var storageKey = 'janjdev-theme';
+                  var theme = localStorage.getItem(storageKey);
+                  var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                  if (theme !== 'light' && theme !== 'dark' && theme !== 'system') {
+                    theme = 'system';
+                  }
+                  var resolvedTheme = theme === 'system' ? systemTheme : theme;
+                  document.documentElement.dataset.theme = resolvedTheme;
+                  document.documentElement.dataset.themePreference = theme;
+                  document.documentElement.classList.toggle('dark', resolvedTheme === 'dark');
+                } catch (error) {}
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className="min-h-screen flex flex-col md:flex-row justify-between">
         <MobileNav />
         <Sidebar />
-        {children}
+        <div className="flex-1 flex flex-col justify-between">
+          {children}
+         
+            <Footer variant="page" className="flex-end" />
+         
+        </div>
       </body>
     </html>
   );

@@ -1,0 +1,47 @@
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.small {
+  gap: 0.9rem;
+}
+
+.medium {
+  gap: 1.5rem;
+}
+
+.socialIcon {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: #000000;
+  transition: fill 200ms ease;
+}
+
+.medium .socialIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+:global(html.dark) .socialIcon,
+:global(html[data-theme='dark']) .socialIcon {
+  fill: var(--muted-text);
+}
+
+.socialLink:hover .socialIcon {
+  fill: var(--accent);
+}

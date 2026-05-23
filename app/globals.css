@@ -3,15 +3,32 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --surface: #ffffff;
+  --surface-elevated: #ffffff;
+  --border-color: rgba(0, 0, 0, 0.1);
   --primary-text: #000000;
   --muted-text: #6B7280;
   --accent: #F91262;
   --extra-bold: 800;
 }
 
+html.dark,
+html[data-theme='dark'] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --surface: #111111;
+  --surface-elevated: #171717;
+  --border-color: rgba(255, 255, 255, 0.12);
+  --primary-text: #ffffff;
+  --muted-text: #d4d4d8;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-border-color: var(--border-color);
   --color-primary-text: var(--primary-text);
   --color-muted-text: var(--muted-text);
   --color-accent: var(--accent);
@@ -23,17 +40,39 @@
   
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.surface-bg {
+  background-color: var(--surface);
+}
+
+.surface-elevated-bg {
+  background-color: var(--surface-elevated);
+}
+
+.theme-border {
+  border-color: var(--border-color);
+}
+
+.theme-text-primary {
+  color: var(--primary-text);
+}
+
+.theme-text-muted {
+  color: var(--muted-text);
 }
 
 .--accent {
@@ -72,6 +111,10 @@ body {
 }
 .text-4xl {
   font-size: 2.25rem;
+}
+
+.jl{
+  justify-content: left;
 }
 
 
