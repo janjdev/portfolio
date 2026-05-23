@@ -1,5 +1,7 @@
 import Socials from '../socials/Socials';
 import styles from './Footer.module.css';
+import ThemeImage from "../theme-image/ThemeImage";
+
 
 type FooterProps = {
   variant: 'sidebar' | 'page';
@@ -40,13 +42,23 @@ export default function Footer({ variant, className }: FooterProps) {
   return (
     <footer className={`${styles.footer} ${variantClass} ${className || ''}`}>
       <div className={styles.inner}>
-        <div className={styles.headingRow}>
-          <span className={styles.dot} />
-          <span className={styles.label}>Let&apos;s Connect</span>
+        <div className="flex justify-between items-end">
+            <div>
+                <div className={`${styles.headingRow}`}>
+                    <span className={styles.dot} />
+                    <span className={styles.label}>Let&apos;s Connect</span>
+                </div>
+                <Socials direction="row" size="sm" />
+            </div>
+            <div className="relative w-15 h-15 pointer-events-all rounded-full border-2 border-[color:var(--primary-text)] background-[color:var(--background)] ">
+                <ThemeImage
+                    lightSrc="/logo-light.svg"
+                    darkSrc="/logo-dark.svg"
+                    alt="Janjdev Logo"
+                    className="mx-w-full h-full absolute mx-auto left-0 top-0"
+                />
+            </div>
         </div>
-
-        <Socials direction="row" size="sm" />
-
         <div className={styles.divider} />
 
         <a className={styles.contactRow} href="mailto:hello@janj.dev">
@@ -68,7 +80,7 @@ export default function Footer({ variant, className }: FooterProps) {
 
         <div className={styles.divider} />
 
-        <p className={styles.copy}>© {year} Janjdev. All rights reserved.</p>
+        <p className={styles.copy}>© {year} janjdev. All rights reserved.</p>
       </div>
     </footer>
   );

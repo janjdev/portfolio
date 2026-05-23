@@ -1,0 +1,32 @@
+.connect {
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+}
+
+.connectLabel {
+	font-family: var(--font-geist-sans);
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.35em;
+	text-transform: uppercase;
+	color: var(--muted-text);
+}
+
+.connectEmail {
+	font-family: var(--font-inter);
+	font-size: 0.9rem;
+	margin-top: 0.25rem;
+}
+
+.dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 9999px;
+	background: transparent;
+	margin-left: 1rem;
+}
+
+.connect .dot {
+	background-color: var(--accent);
+}

@@ -6,6 +6,8 @@ import "./globals.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import MobileNav from "./components/nav/MobileNav";
 import Footer from "./components/footer/Footer";
+import ThemeImage from "./components/theme-image/ThemeImage";
+import ThemeBootstrap from "./components/theme-bootstrap/ThemeBootstrap";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,7 +25,6 @@ const manrope = Manrope(
   subsets: ['latin'],
   variable: '--font-inter',
 });
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,29 +36,8 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${GeistSans.variable} ${manrope.variable} ${inter.variable} h-full antialiased`}
     >
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function () {
-                try {
-                  var storageKey = 'janjdev-theme';
-                  var theme = localStorage.getItem(storageKey);
-                  var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                  if (theme !== 'light' && theme !== 'dark' && theme !== 'system') {
-                    theme = 'system';
-                  }
-                  var resolvedTheme = theme === 'system' ? systemTheme : theme;
-                  document.documentElement.dataset.theme = resolvedTheme;
-                  document.documentElement.dataset.themePreference = theme;
-                  document.documentElement.classList.toggle('dark', resolvedTheme === 'dark');
-                } catch (error) {}
-              })();
-            `,
-          }}
-        />
-      </head>
       <body className="min-h-screen flex flex-col md:flex-row justify-between">
+        <ThemeBootstrap />
         <MobileNav />
         <Sidebar />
         <div className="flex-1 flex flex-col justify-between">
@@ -65,6 +45,14 @@ export default function RootLayout({
          
             <Footer variant="page" className="flex-end" />
          
+        </div>
+        <div className="w-15 h-15 pointer-events-all rounded-full border-2 border-[color:var(--primary-text)] absolute bottom-4 right-4 background-[color:var(--background)] hidden md:flex  ">
+          <ThemeImage
+            lightSrc="/logo-light.svg"
+            darkSrc="/logo-dark.svg"
+            alt="Janjdev Logo"
+            className="mx-w-full h-full absolute mx-auto left-0 top-0"
+          />
         </div>
       </body>
     </html>
