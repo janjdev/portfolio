@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import styles from './ThemeToggle.module.css';
+import SunIcon from '../../assets/sun.svg';
+import MoonIcon from '../../assets/moon.svg';
+import AutoIcon from '../../assets/auto.svg';
 
 type ThemePreference = 'light' | 'dark' | 'system';
 type ResolvedTheme = 'light' | 'dark';
@@ -82,32 +85,5 @@ export default function ThemeToggle({ compact = false }: { compact?: boolean }) 
       </span>
       <span className="sr-only" suppressHydrationWarning>{themeLabel}</span>
     </button>
-  );
-}
-
-function SunIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M12 2.5v2.2M12 19.3v2.2M4.7 4.7l1.6 1.6M17.7 17.7l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.7 19.3l1.6-1.6M17.7 6.3l1.6-1.6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function MoonIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M16.2 14.8A6.6 6.6 0 0 1 9.2 7.8a7 7 0 1 0 7 7Z" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function AutoIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M4 6.5h16v10H4z" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-      <path d="M9 19h6" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-      <path d="M12 16.5V19" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
   );
 }

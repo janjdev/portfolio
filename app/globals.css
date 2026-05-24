@@ -10,6 +10,7 @@
   --muted-text: #6B7280;
   --accent: #F91262;
   --extra-bold: 800;
+  --greeting-text: #6b7280a8;
 }
 
 html.dark,
@@ -21,6 +22,8 @@ html[data-theme='dark'] {
   --border-color: rgba(255, 255, 255, 0.12);
   --primary-text: #ffffff;
   --muted-text: #d4d4d8;
+  --greeting-text: #d4d4d8a8;
+  
 }
 
 @theme inline {
@@ -37,7 +40,15 @@ html[data-theme='dark'] {
   --font-bold: var(--font-bold);
   --align-baseline: var(--align-baseline);
   --font-sans: var(--font-manrope);
-  
+  --animate-revealIn: revealIn 350ms ease-out both;
+  --animate-revealOut: revealOut 300ms ease-in both;
+  --animate-typeIn: typeIn 700ms steps(12, end) both;
+  --animate-typeOut: typeOut 300ms steps(12, end) both;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+  --text-8xl: 6rem;
+  --text-9xl: 8rem;
 }
 
 body {
@@ -117,4 +128,120 @@ button:disabled {
   justify-content: left;
 }
 
+.pt-15 {
+    padding-top: calc(var(--spacing) * 15);
+}
 
+@keyframes revealIn {
+    0% {
+      opacity: 0;
+      transform: translateY(0.25em);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes revealOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(-0.25em);
+    }
+  }
+
+  @keyframes typeIn {
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  @keyframes typeOut {
+    0% {
+      clip-path: inset(0 0 0 0);
+    }
+
+    100% {
+      clip-path: inset(0 100% 0 0);
+    }
+  }
+ /* 1. Base style for all screens (Mobile-First default) */
+.text-xl {
+  font-size: 1.25rem;    /* 20px */
+  line-height: 1.75rem; /* 28px */
+}
+
+/* 2. Medium screens (Tablets and up) */
+@media (min-width: 768px) {
+  .md\:text-2xl {
+    font-size: 1.5rem;   /* 24px */
+    line-height: 2rem;   /* 32px */
+  }
+  .md\:text-3xl {
+      font-size: 1.875rem; /* 30px */
+      line-height: 2.25rem; /* 36px */
+    }
+    .md\:text-4xl {
+      font-size: 2.25rem;    /* 36px */
+      line-height: 2.5rem;   /* 40px */
+    }
+    .md\:text-5xl {
+      font-size: 3rem;    /* 48px */
+      line-height: 1;     /* 48px */
+    }
+    .md\:text-6xl {
+      font-size: 3.75rem;    /* 60px */
+      line-height: 1;     /* 60px */
+    }
+    .md\:text-7xl {
+      font-size: 4.5rem;    /* 72px */
+      line-height: 1;     /* 72px */
+    }
+    .md\:text-8xl { 
+      font-size: 6rem;    /* 96px */
+      line-height: 1;     /* 96px */
+    }
+    .md\:text-9xl {
+      font-size: 8rem;    /* 128px */
+      line-height: 1;     /* 128px */
+    }
+
+}
+
+/* 3. Large screens (Desktops and up) */
+@media (min-width: 1024px) {
+  .lg\:text-4xl {
+    font-size: 2.25rem;    /* 36px */
+    line-height: 2.5rem;   /* 40px */
+  }
+    .lg\:text-5xl {
+      font-size: 3rem;    /* 48px */
+      line-height: 1;     /* 48px */
+    }
+    .lg\:text-6xl {
+      font-size: 3.75rem;    /* 60px */
+      line-height: 1;     /* 60px */
+    }
+    .lg\:text-7xl {
+      font-size: 4.5rem;    /* 72px */
+      line-height: 1;     /* 72px */
+    }
+    .lg\:text-8xl { 
+      font-size: 6rem;    /* 96px */
+      line-height: 1;     /* 96px */
+    }
+    .lg\:text-9xl {
+      font-size: 8rem;    /* 128px */
+      line-height: 1;     /* 128px */
+    }
+}
