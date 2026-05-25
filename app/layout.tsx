@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { Manrope } from 'next/font/google';
 import { Inter } from 'next/font/google';
@@ -6,7 +5,6 @@ import "./globals.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import MobileNav from "./components/nav/MobileNav";
 import Footer from "./components/footer/Footer";
-import ThemeImage from "./components/theme-image/ThemeImage";
 import ThemeBootstrap from "./components/theme-bootstrap/ThemeBootstrap";
 
 export const metadata = {
@@ -46,14 +44,6 @@ export default function RootLayout({
          
             <Footer variant="page" className="flex-end" />
          
-        </div>
-        <div className="w-15 h-15 pointer-events-all rounded-full border-2 border-[color:var(--primary-text)] absolute bottom-4 right-4 background-[color:var(--background)] hidden md:flex  ">
-          <ThemeImage
-            lightSrc="/logo-light.svg"
-            darkSrc="/logo-dark.svg"
-            alt="Janjdev Logo"
-            className="mx-w-full h-full absolute mx-auto left-0 top-0"
-          />
         </div>
       </body>
     </html>

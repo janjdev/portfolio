@@ -13,7 +13,7 @@ export default function HeroText({ items=HeroTextItems, containerClassName, lead
   return (
     <div className={`flex flex-col gap-6 ${containerClassName || ''}`}>
       {items.map((item, idx) => (
-        <div key={idx} className="text-3xl md:text-4xl lg:text-7xl font-black">
+        <div key={idx} className="text-3xl md:text-4xl lg:text-6xl font-black">
           <span className={`text-[color:var(--primary-text)] ${leadClassName || ''}`}>{item.lead} </span>
           <span className={`text-[color:var(--accent)] ${wordClassName || ''}`}>
             <RotatingWord

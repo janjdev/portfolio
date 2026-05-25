@@ -180,9 +180,34 @@ button:disabled {
   font-size: 1.25rem;    /* 20px */
   line-height: 1.75rem; /* 28px */
 }
+.text-base{
+  font-size: 1rem;    /* 16px */
+  line-height: 1.5rem; /* 24px */
+}
+
+.text-lg {
+  font-size: 1.125rem;    /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+.text-xl {
+  font-size: 1.25rem;    /* 20px */
+  line-height: 1.75rem; /* 28px */
+}
 
 /* 2. Medium screens (Tablets and up) */
 @media (min-width: 768px) {
+  .md\:text-base {
+    font-size: 1rem;    /* 16px */
+    line-height: 1.5rem; /* 24px */
+  }
+  .md\:text-lg {
+    font-size: 1.125rem;    /* 18px */
+    line-height: 1.75rem; /* 28px */
+  }
+  .md\:text-xl {
+    font-size: 1.25rem;    /* 20px */
+    line-height: 1.75rem; /* 28px */
+  }
   .md\:text-2xl {
     font-size: 1.5rem;   /* 24px */
     line-height: 2rem;   /* 32px */
@@ -220,6 +245,19 @@ button:disabled {
 
 /* 3. Large screens (Desktops and up) */
 @media (min-width: 1024px) {
+  .lg\:text-base {
+    font-size: 1rem;    /* 16px */
+    line-height: 1.5rem; /* 24px */
+  }
+  .lg\:text-lg {
+    font-size: 1.125rem;    /* 18px */
+    line-height: 1.75rem; /* 28px */
+  }
+  .lg\:text-xl {
+    font-size: 1.25rem;    /* 20px */
+    line-height: 1.75rem; /* 28px */
+  }
+  
   .lg\:text-4xl {
     font-size: 2.25rem;    /* 36px */
     line-height: 2.5rem;   /* 40px */
