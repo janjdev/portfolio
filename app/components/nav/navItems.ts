@@ -4,23 +4,11 @@ export const navItems = [
     href: "/",
   },
   {
-    name: "About",
-    href: "/about",
-  },
-  {
-    name: "Case Studies",
-    href: "/case-studies",
-  },
-  {
     name: "Experience",
     href: "/experience",
   },
   {
-    name: "Skills",
-    href: "/skills",
-  },
-  {
-    name: "Contact",
-    href: "/contact",
+    name: "Case Studies",
+    href: "/case-studies",
   }
 ];
