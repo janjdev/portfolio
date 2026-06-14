@@ -1,9 +1,13 @@
 import {HeroTextItems} from "./HeroTextItems";
 import RotatingWord from "../rotating-text/RotatingText";
 
+type HeroTextItems = {
+  lead: string;
+  words: string[];
+};
 
 type HeroTextProps = {
-  items: HeroTextItems[];
+  items?: HeroTextItems[] ;
   containerClassName?: string;
   leadClassName?: string;
   wordClassName?: string;

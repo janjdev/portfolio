@@ -189,10 +189,7 @@ button:disabled {
   font-size: 1.125rem;    /* 18px */
   line-height: 1.75rem; /* 28px */
 }
-.text-xl {
-  font-size: 1.25rem;    /* 20px */
-  line-height: 1.75rem; /* 28px */
-}
+
 
 /* 2. Medium screens (Tablets and up) */
 @media (min-width: 768px) {

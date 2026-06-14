@@ -1,19 +1,17 @@
 .mobileHeader {
-	position: relative;
-	z-index: 60;
+
 	pointer-events: auto;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1rem;
 	background: var(--surface);
+  min-height: 72px;
+
 }
 
 .mobilePanel {
 	position: fixed;
-	top: 4.75rem;
 	right: 0;
 	left: 0;
-	height: calc(100vh - 4.75rem);
 	width: 100vw;
 	background: var(--background);
 	z-index: 50;

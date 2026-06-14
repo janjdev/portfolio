@@ -7,16 +7,16 @@ import ThemeImage from "../components/theme-image/ThemeImage";
 export default function Home() {
   return (
     <main className="h-full relative w-full">
-      <section className="px-6 pt-15 pb-5 lg:pb-14 md:px-10 lg:px-16 flex flex-col gap-4">
-        <div className="eyebrow text-xs md:text-2xl lg:text-base flex flex-col md:flex-row gap-1 uppercase tracking-[3px] --extra-bold">
+      <section className="px-6 pt-15 pb-14 md:px-10 lg:px-16 flex flex-col gap-6">
+        <div className="eyebrow text-xs md:text-sm lg:text-base flex flex-col md:flex-row gap-1 uppercase tracking-[3px] --extra-bold">
           <span className="text-[color:var(--greeting-text)]">Hello, I&apos;m</span>
           <span className="text-[color:var(--accent)]">January Johnson</span>
         </div>
         <HeroText />
         <p>
-         Full-stack software engineer with strong ownership across frontend, backend, infrastructure, and AI-assisted tools.
+          Full-stack software engineer with strong ownership across frontend, backend, infrastructure, and AI-assisted tools.
         </p>
-        <div className=" flex w-full flex-col md:flex-row gap-5 justify-between">
+        <div className="mt-10 flex w-full flex-col md:flex-row gap-5 justify-between">
           <a
             href="#projects"
             className="group flex h-14 items-center justify-between border border-[color:var(--primary-text)] px-6 text-xs font-bold uppercase tracking-[0.22em] text-[color:var(--primary-text)] transition-colors hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]"
@@ -32,7 +32,7 @@ export default function Home() {
           <a
             href="/January-Johnson-Resume.pdf"
             download
-            className="group flex h-9 items-center justify-between border-b border-[color:var(--primary-text)] px-6 text-xs font-bold uppercase tracking-[0.22em] text-[color:var(--primary-text)] transition-colors hover:border-[color:var(--accent)] hover:text-[color:var(--accent)] hidden md:flex"
+            className="group flex h-9 items-center justify-between border-b border-[color:var(--primary-text)] px-6 text-xs font-bold uppercase tracking-[0.22em] text-[color:var(--primary-text)] transition-colors hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]"
           >
             <span>Resume</span>
 
